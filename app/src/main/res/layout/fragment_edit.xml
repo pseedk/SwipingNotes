@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:background="@drawable/note_edit"
+        tools:context=".presentation.AddFragment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/note_content_edit_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/note_content_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLines="22"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@drawable/color_cursor"
+                tools:ignore="VisualLintTextFieldSize,TextContrastCheck,SpeakableTextPresentCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/button_ok_edit_fragment"
+            android:layout_width="@dimen/button_not_ok_width"
+            android:layout_height="@dimen/button_ok_height"
+            android:layout_marginEnd="@dimen/button_ok_margin"
+            android:layout_marginBottom="@dimen/button_ok_margin"
+            android:clickable="true"
+            android:contentDescription="@string/button_ok"
+            android:focusable="true"
+            android:src="@drawable/button_ok"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/button_not_ok_edit_fragment"
+            android:layout_width="@dimen/button_not_ok_width"
+            android:layout_height="@dimen/button_not_ok_height"
+            android:layout_marginStart="@dimen/button_not_ok_margin"
+            android:clickable="true"
+            android:contentDescription="@string/button_not_ok"
+            android:focusable="true"
+            android:src="@drawable/button_not_ok"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/button_ok_edit_fragment"
+            tools:ignore="ImageContrastCheck" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="617dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

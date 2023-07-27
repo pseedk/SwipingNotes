@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SwipingNotes</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button_ok">button_ok</string>
+    <string name="button_not_ok">button_not_ok</string>
+    <string name="add_new_note_content_desc">add_new_note</string>
+    <string name="note_content_edit_text">Редактирование текста заметки</string>
+</resources>

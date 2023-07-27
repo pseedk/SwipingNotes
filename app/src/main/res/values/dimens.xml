@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_ok_width">80dp</dimen>
+    <dimen name="button_ok_height">80dp</dimen>
+    <dimen name="button_ok_margin">16dp</dimen>
+    <dimen name="button_not_ok_width">83dp</dimen>
+    <dimen name="button_not_ok_height">64dp</dimen>
+    <dimen name="button_not_ok_margin">16dp</dimen>
+    <dimen name="button_add_new_note_width">80dp</dimen>
+    <dimen name="button_add_new_note_height">80dp</dimen>
+    <dimen name="button_add_new_note_margin_end">25dp</dimen>
+    <dimen name="button_add_new_note_margin_bottom">25dp</dimen>
+</resources>
