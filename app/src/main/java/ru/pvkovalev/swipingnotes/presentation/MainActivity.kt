@@ -6,9 +6,9 @@ import android.view.WindowManager
 import androidx.core.app.PendingIntentCompat.getActivity
 import androidx.fragment.app.FragmentActivity
 import ru.pvkovalev.swipingnotes.R
-import ru.pvkovalev.swipingnotes.utils.APP_ACTIVITY
-import ru.pvkovalev.swipingnotes.utils.hideStatusBar
-import ru.pvkovalev.swipingnotes.utils.resizeSoftInputMode
+import ru.pvkovalev.swipingnotes.domain.utils.APP_ACTIVITY
+import ru.pvkovalev.swipingnotes.domain.utils.hideStatusBar
+import ru.pvkovalev.swipingnotes.domain.utils.resizeSoftInputMode
 
 
 class MainActivity : FragmentActivity() {

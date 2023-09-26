@@ -5,10 +5,9 @@
 <!--        <item name="android:windowTranslucentStatus">false</item>-->
 <!--        <item name="android:windowTranslucentNavigation">true</item>-->
         <item name="colorPrimaryDark">@color/status_bar_color</item>
-
-
-
+        
     </style>
 
     <style name="Theme.SwipingNotes" parent="Base.Theme.SwipingNotes" />
+
 </resources>

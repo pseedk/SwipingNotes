@@ -3,13 +3,12 @@ package ru.pvkovalev.swipingnotes.presentation
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import ru.pvkovalev.swipingnotes.R
 import ru.pvkovalev.swipingnotes.databinding.NoteItemBinding
-import ru.pvkovalev.swipingnotes.domain.NoteModel
+import ru.pvkovalev.swipingnotes.domain.model.NoteModel
+import ru.pvkovalev.swipingnotes.presentation.fragments.main_fragment.MainFragmentDirections
 
 class NotesRecyclerViewAdapter :
     ListAdapter<NoteModel, NotesRecyclerViewAdapter.NotesViewHolder>(NotesDiff) {
@@ -40,7 +39,8 @@ class NotesRecyclerViewAdapter :
             tvNoteText.text = currentNote.noteText
         }
         holder.itemView.setOnClickListener {
-            it.findNavController().navigate(R.id.action_mainFragment_to_editFragment)
+            val direction = MainFragmentDirections.actionMainFragmentToEditFragment(currentNote)
+            it.findNavController().navigate(direction)
         }
     }
 }

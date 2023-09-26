@@ -12,7 +12,7 @@
         android:focusableInTouchMode="true"
         android:focusable="true"
         android:background="@drawable/note_edit"
-        tools:context=".presentation.AddFragment">
+        tools:context=".presentation.fragments.add_fragment.AddFragment">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/note_content_edit_layout"
@@ -32,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textCapSentences|textMultiLine"
-                android:maxLines="22"
+                android:maxLines="19"
                 android:textColor="@color/black"
                 android:textCursorDrawable="@drawable/color_cursor"
                 tools:ignore="VisualLintTextFieldSize,TextContrastCheck,SpeakableTextPresentCheck" />

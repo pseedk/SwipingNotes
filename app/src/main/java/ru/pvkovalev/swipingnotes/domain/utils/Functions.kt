@@ -1,4 +1,4 @@
-package ru.pvkovalev.swipingnotes.utils
+package ru.pvkovalev.swipingnotes.domain.utils
 
 import android.app.Activity
 import android.content.Context

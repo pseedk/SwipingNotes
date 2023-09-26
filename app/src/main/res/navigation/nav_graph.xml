@@ -7,31 +7,51 @@
 
     <fragment
         android:id="@+id/editFragment"
-        android:name="ru.pvkovalev.swipingnotes.presentation.EditFragment"
+        android:name="ru.pvkovalev.swipingnotes.presentation.fragments.edit_fragment.EditFragment"
         android:label="fragment_edit"
         tools:layout="@layout/fragment_edit" >
         <action
             android:id="@+id/action_editFragment_to_mainFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
             app:destination="@id/mainFragment" />
+        <argument
+            android:name="note"
+            app:argType="ru.pvkovalev.swipingnotes.domain.model.NoteModel"
+            app:nullable="true" />
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
-        android:name="ru.pvkovalev.swipingnotes.presentation.MainFragment"
+        android:name="ru.pvkovalev.swipingnotes.presentation.fragments.main_fragment.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/action_mainFragment_to_addFragment"
-            app:destination="@id/addFragment" />
+            app:destination="@id/addFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_mainFragment_to_editFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
             app:destination="@id/editFragment" />
     </fragment>
     <fragment
         android:id="@+id/addFragment"
-        android:name="ru.pvkovalev.swipingnotes.presentation.AddFragment"
+        android:name="ru.pvkovalev.swipingnotes.presentation.fragments.add_fragment.AddFragment"
         android:label="AddFragment" >
         <action
             android:id="@+id/action_addFragment_to_mainFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
             app:destination="@id/mainFragment" />
     </fragment>
 </navigation>
