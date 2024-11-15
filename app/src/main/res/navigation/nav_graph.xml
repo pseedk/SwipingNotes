@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/editFragment"
-        android:name="ru.pvkovalev.swipingnotes.presentation.fragments.edit_fragment.EditFragment"
+        android:name="ru.pvkovalev.swipingnotes.presentation.fragments.edit.EditFragment"
         android:label="fragment_edit"
         tools:layout="@layout/fragment_edit" >
         <action
@@ -19,12 +19,11 @@
             app:destination="@id/mainFragment" />
         <argument
             android:name="note"
-            app:argType="ru.pvkovalev.swipingnotes.domain.model.NoteModel"
-            app:nullable="true" />
+            app:argType="ru.pvkovalev.swipingnotes.domain.model.NotesItem" />
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
-        android:name="ru.pvkovalev.swipingnotes.presentation.fragments.main_fragment.MainFragment"
+        android:name="ru.pvkovalev.swipingnotes.presentation.fragments.main.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
@@ -44,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/addFragment"
-        android:name="ru.pvkovalev.swipingnotes.presentation.fragments.add_fragment.AddFragment"
+        android:name="ru.pvkovalev.swipingnotes.presentation.fragments.add.AddFragment"
         android:label="AddFragment" >
         <action
             android:id="@+id/action_addFragment_to_mainFragment"
@@ -53,5 +52,8 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"
             app:destination="@id/mainFragment" />
+        <argument
+            android:name="note"
+            app:argType="ru.pvkovalev.swipingnotes.domain.model.NotesItem" />
     </fragment>
 </navigation>

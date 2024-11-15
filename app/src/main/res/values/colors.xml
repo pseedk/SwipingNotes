@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="item_background_color">#FF7800</color>
     <color name="status_bar_color">#D59863</color>
+    <color name="red">#FF0000</color>
+    <color name="cursor_color">#FF5722</color>
 </resources>

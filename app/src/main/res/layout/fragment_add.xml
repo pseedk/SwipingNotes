@@ -1,95 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".presentation.fragments.add_fragment.AddFragment">
+    android:padding="@dimen/_6sdp"
+    tools:context=".presentation.fragments.add.AddFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/note">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/note_content_add_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:layout_constraintBottom_toTopOf="@id/button_ok_add_fragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:boxStrokeWidth="0dp"
-            app:boxStrokeWidthFocused="0dp"
-            app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
-            app:layout_constraintEnd_toEndOf="@id/guideline_end"
-            app:layout_constraintStart_toStartOf="@id/guideline_start"
-            app:layout_constraintTop_toTopOf="@id/guideline_top">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/note_content_add_edit_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:cursorVisible="true"
-                android:inputType="textCapSentences|textMultiLine"
-                android:maxLines="8"
-                android:textColor="@color/black"
-                android:textCursorDrawable="@drawable/color_cursor"
-                tools:ignore="SpeakableTextPresentCheck" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <ImageView
-            android:id="@+id/button_ok_add_layout"
-            android:layout_width="@dimen/button_ok_width"
-            android:layout_height="@dimen/button_ok_height"
-            android:layout_marginEnd="@dimen/button_ok_margin"
-            android:layout_marginBottom="@dimen/button_ok_margin"
-            android:clickable="true"
-            android:contentDescription="@string/button_ok"
-            android:focusable="true"
-            android:src="@drawable/button_ok"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <ImageView
-            android:id="@+id/button_not_ok_add_layout"
-            android:layout_width="@dimen/button_not_ok_width"
-            android:layout_height="@dimen/button_not_ok_height"
-            android:layout_marginStart="@dimen/button_not_ok_margin"
-            android:clickable="true"
-            android:contentDescription="@string/button_not_ok"
-            android:focusable="true"
-            android:src="@drawable/button_not_ok"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/button_ok_add_layout"
-            tools:ignore="ImageContrastCheck" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline_top"
-            android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/note_content_edit_text"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_begin="191dp" />
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/pacifico"
+            android:inputType="textCapSentences|textMultiLine"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/color_cursor"
+            tools:ignore="VisualLintTextFieldSize,TextContrastCheck,SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline_bottom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_begin="586dp" />
+    <ImageView
+        android:id="@+id/button_ok_add_fragment"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:adjustViewBounds="true"
+        android:clickable="true"
+        android:contentDescription="@string/button_ok"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/button_ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline_start"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="78dp" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline_end"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="340dp" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</FrameLayout>
+    <ImageView
+        android:id="@+id/button_not_ok_add_fragment"
+        android:layout_width="@dimen/_55sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:adjustViewBounds="true"
+        android:clickable="true"
+        android:contentDescription="@string/button_not_ok"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/button_not_ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/button_ok_add_fragment"
+        tools:ignore="ImageContrastCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>

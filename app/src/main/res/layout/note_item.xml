@@ -1,75 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="200dp"
-    android:layout_marginEnd="10dp">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp">
 
     <ImageView
         android:id="@+id/iv_note"
-        android:layout_width="150dp"
-        android:layout_height="200dp"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_120sdp"
+        android:adjustViewBounds="true"
         android:contentDescription="@string/note_item"
-        android:scaleType="fitXY"
-        android:src="@drawable/note"
+        android:scaleType="fitCenter"
+        android:src="@drawable/im_sticker5"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="150dp"
-        android:layout_height="200dp">
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_note_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="3"
+        android:textSize="@dimen/_10sdp"
+        android:fontFamily="@font/pacifico"
+        android:padding="@dimen/_28sdp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/iv_note"
+        app:layout_constraintEnd_toEndOf="@id/iv_note"
+        app:layout_constraintStart_toStartOf="@+id/iv_note"
+        app:layout_constraintTop_toTopOf="@id/iv_note" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_note_text"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_gravity="center"
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
-            app:layout_constraintEnd_toEndOf="@id/guideline_end"
-            app:layout_constraintStart_toStartOf="@+id/guideline_start"
-            app:layout_constraintTop_toTopOf="@id/guideline_top"
-            tools:ignore="TextContrastCheck"
-            tools:text="Text" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline_top"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_begin="50dp" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline_start"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="30dp" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline_bottom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_begin="155dp" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline_end"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="115dp" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</FrameLayout>
-
-
-
-
-
-
-
-
-
+</androidx.constraintlayout.widget.ConstraintLayout>

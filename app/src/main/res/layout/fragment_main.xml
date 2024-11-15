@@ -1,35 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".presentation.fragments.main_fragment.MainFragment">
+    android:padding="@dimen/_4sdp"
+    tools:context=".presentation.fragments.main.MainFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/notes_recycler_view"
-        tools:listitem="@layout/note_item"
         android:layout_width="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_height="match_parent"/>
+        tools:listitem="@layout/note_item" />
 
     <ImageView
         android:id="@+id/button_add_new_note"
-        android:layout_width="@dimen/button_add_new_note_width"
-        android:layout_height="@dimen/button_add_new_note_height"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginEnd="@dimen/button_add_new_note_margin_end"
+        android:layout_width="@dimen/_55sdp"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
         android:clickable="true"
-        android:focusable="true"
-        android:layout_marginBottom="@dimen/button_add_new_note_margin_bottom"
         android:contentDescription="@string/add_new_note_content_desc"
-        android:src="@drawable/fab"/>
-
+        android:focusable="true"
+        android:src="@drawable/fab"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
