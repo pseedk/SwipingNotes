@@ -3,7 +3,7 @@ package ru.pvkovalev.swipingnotes.data.repository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import ru.pvkovalev.swipingnotes.data.db.NotesDao
-import ru.pvkovalev.swipingnotes.data.db.NotesMapper
+import ru.pvkovalev.swipingnotes.data.mapper.NotesMapper
 import ru.pvkovalev.swipingnotes.domain.model.NotesItem
 import ru.pvkovalev.swipingnotes.domain.repository.NotesRepository
 import javax.inject.Inject

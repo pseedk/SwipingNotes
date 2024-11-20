@@ -1,5 +1,6 @@
-package ru.pvkovalev.swipingnotes.data.db
+package ru.pvkovalev.swipingnotes.data.mapper
 
+import ru.pvkovalev.swipingnotes.data.db.NotesItemDbModel
 import ru.pvkovalev.swipingnotes.domain.model.NotesItem
 import javax.inject.Inject
 

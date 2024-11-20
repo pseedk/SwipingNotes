@@ -7,7 +7,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import ru.pvkovalev.swipingnotes.data.db.AppDatabase
 import ru.pvkovalev.swipingnotes.data.db.NotesDao
-import ru.pvkovalev.swipingnotes.data.db.NotesMapper
+import ru.pvkovalev.swipingnotes.data.mapper.NotesMapper
 import ru.pvkovalev.swipingnotes.data.repository.NotesRepositoryImpl
 import ru.pvkovalev.swipingnotes.domain.repository.NotesRepository
 import javax.inject.Singleton
